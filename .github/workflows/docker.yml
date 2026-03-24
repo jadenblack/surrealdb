@@ -163,7 +163,7 @@ jobs:
           docker pull '${{ steps.tags.outputs.tag }}'
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.29.0
+        uses: aquasecurity/trivy-action@0.35.0
         if: ${{ inputs.push }}
         with:
           image-ref: '${{ steps.tags.outputs.tag }}'
